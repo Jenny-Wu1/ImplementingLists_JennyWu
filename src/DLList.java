@@ -35,4 +35,17 @@ public class DLList {
             temp.next.previous = temp.previous;
         }
     }
+
+    public String toString() {
+        if (head == null) {
+            return "Empty List";
+        }
+        String result = "";
+        DLNode temp = head;
+        while (temp != null) {
+            result += temp.data + "\n";
+            temp = temp.next;
+        }
+        return result;
+    }
 }
