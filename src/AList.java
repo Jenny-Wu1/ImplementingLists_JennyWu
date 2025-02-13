@@ -29,4 +29,15 @@ public class AList {
         songs[size - 1] = null;
         size--;
     }
+
+    public String toString() {
+        if (size == 0) {
+            return "Empty List";
+        }
+        String result = "";
+        for (int i = 0; i < size; i++) {
+            result += songs[i] + "\n";
+        }
+        return result;
+    }
 }
