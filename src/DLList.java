@@ -21,7 +21,7 @@ public class DLList {
 
     public void removy(int position) {
         DLNode temp = head;
-        for (int i = 0; temp != null & i < position; i++) {
+        for (int i = 0; temp != null && i < position; i++) {
             temp = temp.next;
         }
 
