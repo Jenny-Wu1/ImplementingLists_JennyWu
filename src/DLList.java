@@ -21,7 +21,7 @@ public class DLList {
 
     public void removy(int position) {
         DLNode temp = head;
-        for (int i = 0; temp != null & i < position - 1; i++) {
+        for (int i = 0; temp != null & i < position; i++) {
             temp = temp.next;
         }
 
@@ -47,5 +47,24 @@ public class DLList {
             temp = temp.next;
         }
         return result;
+    }
+
+    public static void main(String[] args) {
+        DLList songsList = new DLList();
+        System.out.println(songsList);
+        System.out.println();
+
+        Song song1 = new Song("Coral Crown", "Darren Korb", 4.07);
+        Song song2 = new Song("El Pibe De Mi Barrio", "Dr. Krapula", 2.47);
+        Song song3 = new Song("CASANOVE POSSE", "ALI", 4.00);
+        songsList.addy(song1);
+        songsList.addy(song3);
+        songsList.addy(song2);
+        songsList.addy(song1);
+        System.out.println(songsList);
+        System.out.println();
+
+        songsList.removy(1);
+        System.out.println(songsList);
     }
 }
