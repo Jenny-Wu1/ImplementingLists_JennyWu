@@ -30,4 +30,17 @@ public class SLList {
         }
         temp.next = temp.next.next;
     }
+
+    public String toString() {
+        if (head == null) {
+            return "Empty List";
+        }
+        String result = "";
+        SLNode temp = head;
+        while (temp != null) {
+            result += temp.data + "\n";
+            temp = temp.next;
+        }
+        return result;
+    }
 }
