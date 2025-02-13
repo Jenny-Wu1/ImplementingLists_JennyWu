@@ -43,4 +43,23 @@ public class SLList {
         }
         return result;
     }
+
+    public static void main(String[] args) {
+        SLList songsList = new SLList();
+        System.out.println(songsList);
+        System.out.println();
+
+        Song song1 = new Song("Coral Crown", "Darren Korb", 4.07);
+        Song song2 = new Song("El Pibe De Mi Barrio", "Dr. Krapula", 2.47);
+        Song song3 = new Song("CASANOVE POSSE", "ALI", 4.00);
+        songsList.addy(song1);
+        songsList.addy(song3);
+        songsList.addy(song2);
+        songsList.addy(song1);
+        System.out.println(songsList);
+        System.out.println();
+
+        songsList.removy(1);
+        System.out.println(songsList);
+    }
 }
