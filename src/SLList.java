@@ -17,4 +17,17 @@ public class SLList {
             temp.next = newNode;
         }
     }
+
+    public void removy(int position) {
+        if (position == 0) {
+            head = head.next;
+            return;
+        }
+
+        SLNode temp = head;
+        for (int i = 0; temp != null & i < position; i++) {
+            temp = temp.next;
+        }
+        temp.next = temp.next.next;
+    }
 }
