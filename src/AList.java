@@ -21,4 +21,12 @@ public class AList {
         songs[size] = s;
         size++;
     }
+
+    public void removy(int position) {
+        for (int i = position; i < size - 1; i++) {
+            songs[i] = songs[i + 1];
+        }
+        songs[size - 1] = null;
+        size--;
+    }
 }
