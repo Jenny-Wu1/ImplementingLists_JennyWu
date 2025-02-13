@@ -18,4 +18,21 @@ public class DLList {
             newNode.previous =temp;
         }
     }
+
+    public void removy(int position) {
+        DLNode temp = head;
+        for (int i = 0; temp != null & i < position - 1; i++) {
+            temp = temp.next;
+        }
+
+        if (temp.previous != null) {
+            temp.previous.next = temp.next;
+        } else {
+            head = temp.next;
+        }
+
+        if (temp.next != null) {
+            temp.next.previous = temp.previous;
+        }
+    }
 }
