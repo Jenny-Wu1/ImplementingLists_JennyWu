@@ -25,7 +25,7 @@ public class SLList {
         }
 
         SLNode temp = head;
-        for (int i = 0; temp != null & i < position; i++) {
+        for (int i = 0; temp != null & i < position - 1; i++) {
             temp = temp.next;
         }
         temp.next = temp.next.next;
