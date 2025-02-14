@@ -1,8 +1,8 @@
 public class SLNode {
-    Song data;
+    Object data;
     SLNode next;
 
-    public SLNode (Song data) {
+    public SLNode (Object data) {
         this.data = data;
         this.next = null;
     }
