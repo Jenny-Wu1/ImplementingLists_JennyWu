@@ -5,7 +5,7 @@ public class DLList {
         head = null;
     }
 
-    public void addy(Song s) {
+    public void addy(Object s) {
         DLNode newNode = new DLNode(s);
         if (head == null) {
             head = newNode;

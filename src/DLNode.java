@@ -1,9 +1,9 @@
 public class DLNode {
-    Song data;
+    Object data;
     DLNode previous;
     DLNode next;
 
-    public DLNode (Song data) {
+    public DLNode (Object data) {
         this.data = data;
         this.previous = null;
         this.next = null;
