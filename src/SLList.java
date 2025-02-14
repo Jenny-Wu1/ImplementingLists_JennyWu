@@ -5,8 +5,8 @@ public class SLList {
         head = null;
     }
 
-    public void addy(Song s) {
-        SLNode newNode = new SLNode(s);
+    public void addy(Object o) {
+        SLNode newNode = new SLNode(o);
         if (head == null) {
             head = newNode;
         } else {
