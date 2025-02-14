@@ -1,32 +1,32 @@
 public class AList {
-    private Song[] songs;
+    private Object[] obs;
     private int size;
     private int maxSize = 3;
 
     public AList() {
-        songs = new Song[maxSize];
+        obs = new Object[maxSize];
         size = 0;
     }
 
-    public void addy(Song s) {
+    public void addy(Object o) {
         if (size == maxSize) {
             int newSize = maxSize * 2;
-            Song[] newSongs = new Song[newSize];
+            Object[] newObs = new Object[newSize];
             for (int i = 0; i < size; i++) {
-                newSongs[i] = songs[i];
+                newObs[i] = obs[i];
             }
-            songs = newSongs;
+            obs = newObs;
             maxSize = maxSize * 2;
         }
-        songs[size] = s;
+        obs[size] = o;
         size++;
     }
 
     public void removy(int position) {
         for (int i = position; i < size - 1; i++) {
-            songs[i] = songs[i + 1];
+            obs[i] = obs[i + 1];
         }
-        songs[size - 1] = null;
+        obs[size - 1] = null;
         size--;
     }
 
@@ -36,7 +36,7 @@ public class AList {
         }
         String result = "";
         for (int i = 0; i < size; i++) {
-            result += songs[i] + "\n";
+            result += obs[i] + "\n";
         }
         return result;
     }
